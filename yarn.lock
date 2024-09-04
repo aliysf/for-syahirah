@@ -570,6 +570,11 @@
     "@types/prop-types" "*"
     csstype "^3.0.2"
 
+"@types/vara@^1.1.4":
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/@types/vara/-/vara-1.1.4.tgz#b4361952627137ca4c13a86126a6be8e26e6c213"
+  integrity sha512-LYXunvwnYoyzhNZGmQNrxFMPoeheW58vmxYfpwSQ8IBliOjMVbN+UvKhdJFBGE/IO0GmQjZ7MUinbMILl82tug==
+
 "@types/web-animations-js@^2.2.16":
   version "2.2.16"
   resolved "https://registry.yarnpkg.com/@types/web-animations-js/-/web-animations-js-2.2.16.tgz#fd84c49a7a2f148b588ba8b372496162b427742f"
@@ -1984,6 +1989,11 @@ util-deprecate@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/util-deprecate/-/util-deprecate-1.0.2.tgz#450d4dc9fa70de732762fbd2d4a28981419a0ccf"
   integrity sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==
+
+vara@^1.4.1:
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/vara/-/vara-1.4.1.tgz#974272696f39682bc4da7cc2e2f73d5fd683c305"
+  integrity sha512-oX+D+jXIJTmdQb7+OeuhvxSvSJB1PG8X2mzI3u7wTbuJ4v2QskA2fNlkNnyI2883YBRmEoA6R9gJg4jHiVNvXQ==
 
 vite@^5.4.1:
   version "5.4.2"

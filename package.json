@@ -14,12 +14,14 @@
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.26.1",
     "typeit": "^8.8.4",
-    "typeit-react": "^2.7.2"
+    "typeit-react": "^2.7.2",
+    "vara": "^1.4.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
+    "@types/vara": "^1.1.4",
     "@vitejs/plugin-react": "^4.3.1",
     "autoprefixer": "^10.4.20",
     "eslint": "^9.9.0",

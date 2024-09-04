@@ -1,4 +1,3 @@
-import {StrictMode} from 'react'
 import {createRoot} from 'react-dom/client'
 import './index.css'
 import {createBrowserRouter, Outlet, RouterProvider, useNavigate} from "react-router-dom";
@@ -109,9 +108,7 @@ const router = createBrowserRouter([
 ]);
 
 createRoot(document.getElementById('root')!).render(
-    <StrictMode>
-        <div className={'max-w-[768px]'}>
-            <RouterProvider router={router}/>
-        </div>
-    </StrictMode>,
+    <div className={'max-w-[768px]'}>
+        <RouterProvider router={router}/>
+    </div>
 )
