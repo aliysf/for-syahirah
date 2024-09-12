@@ -1,58 +1,21 @@
-import Vara from 'vara';
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 
 const Search = () => {
+    const [img, setImg] = useState('')
+    const [search, setSearch] = useState('')
+
     useEffect(() => {
-        new Vara(
-            "#vara-container",
-            "https://raw.githubusercontent.com/akzhy/Vara/master/fonts/Satisfy/SatisfySL.json",
-            [
-                {
-                    text: "Hi Syahirah!",
-                    fontSize: 40,
-                    strokeWidth: 0.7,
-                    color: 'white',
-                    textAlign: 'center'
-                },
-                {
-                    text: "Disini tulisan aku lebih bagus hehe.",
-                    color: 'white',
-                    textAlign: 'center'
-                },
-                {
-                    text: "Aku sangat bersyukur kenal dengan kamu, aku mungkin banyak kurangnya, sering kepo, sering debat hal ga penting, bawel, untungnya kamu tetep bersabar yh.",
-                    color: 'white',
-                    textAlign: 'center'
-                },
-                {
-                    text: "Aku tau aku udah berkali-kali ngucapin ini, kamu itu pinter banget, punya pemikiran yang dewasa, dan baikkkkk banget",
-                    color: 'white',
-                    textAlign: 'center'
-                },
-                {
-                    text: "Tapi, kamu harus tetep bahagia yah, ngedumel tipis-tipis gapapa, orang sekitar kamu selalu berharap kamu senang setiap harinya.",
-                    color: 'white',
-                    textAlign: 'center'
-                },
-                {
-                    text: "Aku selalu bangga & kagum kalo denger cerita kamu.",
-                    color: 'white',
-                    textAlign: 'center'
-                },
-                {
-                    text: "Really Love Everything About U",
-                    color: 'gold',
-                    textAlign: 'center',
-                    fontSize: 40,
+        const filter = search.includes('orange') ? '/orange' : '';
+        if (search) fetch('https://cataas.com/cat' + filter).then((resp) => resp.blob().then((res) => setImg(URL.createObjectURL(res))))
+    }, [search])
 
-                },
-
-            ]
-        );
-    }, []);
     return (
-        <div id={'vara-container'} className={'mb-[130px] mt-[50px]'}>
+        <div className={'flex h-[calc(100vh_-_127px)] justify-center items-center flex-col gap-[20px]'}>
+            <input value={search} placeholder={'Search Anything!'} className={'focus:outline-none p-[20px] text-center'}
+                   onChange={(e) => setSearch(e.target.value)}/>
+            {img && <img src={img} className={'w-[200px] h-[200px] object-cover rounded-full'} alt={'fetch'}/>}
 
+            {!img && <span>Just in case kamu butuh refreshing :)</span>}
         </div>
     );
 };

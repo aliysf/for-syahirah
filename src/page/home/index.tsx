@@ -7,6 +7,7 @@ import TypeIt from "typeit-react";
 import Syg from "../../assets/syg.png";
 import Coklat from "../../assets/coklat.png";
 import Bunga from "../../assets/bunga.png";
+import {useNavigate} from "react-router-dom";
 
 const Header = () => {
     return (
@@ -23,6 +24,7 @@ const Header = () => {
 }
 
 const Home = () => {
+    const navigate = useNavigate();
     return (
         <>
             <Header/>
@@ -30,7 +32,7 @@ const Home = () => {
                 <div
                     className={'rounded w-screen animated-background ml-[-16px] bg-gradient-to-r from-purple-400 via-rose-300 to-violet-400 h-[200px] text-left flex flex-col justify-center pl-2 gap-[4px]'}>
                     <h3 className={'text-left font-bold text-[30px] text-neutral-800'}>Happy<span
-                        className={'text-yellow-300'}> 23th</span> Birthday 🥳</h3>
+                        className={'text-yellow-300'}> 22th</span> Birthday 🥳</h3>
                     <span className={'text-left font-bold text-[20px]'}>
                     Hope you {' '}
                         <TypeIt getBeforeInit={(instance) => instance.options({
@@ -39,7 +41,10 @@ const Home = () => {
                         }).type('always be happy.').pause(500).delete().type('get better :)').pause(500).delete().type('achieve your goals.').pause(500).delete().type('be healthy.').pause(500).delete().type('feel grateful')}
                                 className={'text-left font-bold text-[20px]'}></TypeIt>
                 </span>
-                    <button className={'w-fit mt-[4px]'}>Open Gift {'   '}🎁</button>
+                    <button onClick={() => navigate('/letter')}
+                            className={'w-fit mt-[4px] outline-none focus:outline-none'}>Open The
+                        Letter {'   '}✉️
+                    </button>
 
                 </div>
 
