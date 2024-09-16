@@ -91,7 +91,7 @@ const Profile = () => {
                 <h2 className={'text-left font-bold text-[20px] mb-[4px]'}>Playlist</h2>
                 <iframe style={{"borderRadius": "12px"}}
                         src="https://open.spotify.com/embed/playlist/37i9dQZF1EJBEqCydrBGEi?utm_source=generator"
-                        width="100%" height="152" frameBorder="0" allowFullScreen=""
+                        width="100%" height="152" frameBorder="0" allowFullScreen={false}
                         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                         loading="lazy"></iframe>
             </div>
