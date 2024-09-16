@@ -13,7 +13,7 @@ const Footer = () => {
 
     return (
         <footer className={'fixed bottom-0 w-full left-0'}>
-            {!location.pathname.includes('letter') &&
+            {!location.pathname.includes('letter') && !location.pathname.includes('library') &&
                 <>
                     <div
                         className={'bg-purple-500 h-[56px] w-[90%] m-auto rounded flex justify-between items-center px-[10px]'}>

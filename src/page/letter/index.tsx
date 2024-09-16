@@ -1,7 +1,7 @@
 import Vara from 'vara';
 import {useEffect} from "react";
 
-let timer;
+let timer: number;
 
 function pageScroll() {
     window.scrollBy(0, 0.5);
@@ -30,7 +30,7 @@ const Letter = () => {
                     textAlign: 'center'
                 },
                 {
-                    text: "Aku sangat bersyukur kenal dengan kamu, aku mungkin banyak kurangnya, sering kepo, sering debat hal ga penting, bawel, untungnya kamu tetep bersabar yahh.",
+                    text: "Aku sangat bersyukur kenal dengan kamu, sangat senang ketika ngobrol sama kamu, dan sangat bahagia karena dikit lagi aku jadi suami kamu.",
                     color: 'white',
                     letterSpacing: 2,
                     fontSize: 18,
@@ -38,7 +38,7 @@ const Letter = () => {
                     textAlign: 'center'
                 },
                 {
-                    text: "Aku tau aku udah berkali-kali ngucapin ini, kamu itu pinter banget, punya pemikiran yang dewasa, dan tentunya cantik sekaliii!!",
+                    text: "Kita saat ini memang masih mengenal satu sama lain, akan berlanjut sampai seterusnya, kita harus enjoy the process yaa.",
                     color: 'white',
                     letterSpacing: 2,
                     fontSize: 18,
@@ -46,11 +46,27 @@ const Letter = () => {
                     textAlign: 'center'
                 },
                 {
-                    text: "Kamu harus tetep bahagia yah, boleh kok ngedumel tipis-tipis, orang sekitar kamu selalu ingin ngebikin kamu senang setiap harinya, termasuk aku.",
+                    text: "Karena kamu udah bikin aku senang setiaphari nya, kamu juga harus tetep bahagia yah, boleh kok ngedumel tipis-tipis, orang sekitar kamu selalu ingin ngebikin kamu senang setiap harinya, termasuk aku.",
                     color: 'white',
                     letterSpacing: 2,
                     fontSize: 18,
-                    duration: 3000,
+                    duration: 5000,
+                    textAlign: 'center'
+                },
+                {
+                    text: "Aku mendoakan kamu agar sehat selalu, mendapatkan hal-hal yang terbaik, dan dikelilingi oleh orang-orang baik.",
+                    color: 'white',
+                    letterSpacing: 2,
+                    fontSize: 18,
+                    duration: 5000,
+                    textAlign: 'center'
+                },
+                {
+                    text: "Dan...",
+                    color: 'white',
+                    letterSpacing: 2,
+                    fontSize: 18,
+                    duration: 2000,
                     textAlign: 'center'
                 },
                 {
@@ -66,6 +82,19 @@ const Letter = () => {
                     color: 'gold',
                     textAlign: 'center',
                     fontSize: 30,
+                },
+                {
+                    text: "Happy Birthday,",
+                    color: 'pink',
+                    fontSize: 25,
+                    textAlign: 'center'
+                },
+                {
+                    text: "My Love",
+                    color: 'pink',
+                    letterSpacing: 2,
+                    fontSize: 30,
+                    textAlign: 'center'
                 },
             ]
         );

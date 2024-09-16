@@ -10,7 +10,7 @@ const Search = () => {
     }, [search])
 
     return (
-        <div className={'flex h-[calc(100vh_-_127px)] justify-center items-center flex-col gap-[20px]'}>
+        <div className={'flex h-[calc(100vh_-_127px)]  items-center flex-col gap-[20px] mt-[20px]'}>
             <input value={search} placeholder={'Search Anything!'} className={'focus:outline-none p-[20px] text-center'}
                    onChange={(e) => setSearch(e.target.value)}/>
             {img && <img src={img} className={'w-[200px] h-[200px] object-cover rounded-full'} alt={'fetch'}/>}
