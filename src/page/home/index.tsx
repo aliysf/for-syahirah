@@ -16,7 +16,7 @@ const Header = () => {
         <div
             className={'h-[72px] bg-[#242424] w-full left-0 flex items-center justify-between py-[20px]'}>
             <div className={'text-[24px]'}>
-                Good Afternoon
+                Hi There!
             </div>
             <div>
                 <img className={'w-[50px] h-[50px] rounded-full bg-white object-cover'} src={Syg}></img>
