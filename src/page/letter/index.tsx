@@ -24,7 +24,7 @@ const Letter = () => {
                 {
                     text: "Disini tulisan aku lebih bagus hehe.",
                     fontSize: 18,
-                    duration: 2000,
+                    duration: 3000,
                     letterSpacing: 2,
                     color: 'white',
                     textAlign: 'center'
@@ -38,15 +38,7 @@ const Letter = () => {
                     textAlign: 'center'
                 },
                 {
-                    text: "Kita saat ini memang masih mengenal satu sama lain, akan berlanjut sampai seterusnya, kita harus enjoy the process yaa.",
-                    color: 'white',
-                    letterSpacing: 2,
-                    fontSize: 18,
-                    duration: 5000,
-                    textAlign: 'center'
-                },
-                {
-                    text: "Karena kamu udah bikin aku senang setiaphari nya, kamu juga harus tetep bahagia yah, boleh kok ngedumel tipis-tipis, orang sekitar kamu selalu ingin ngebikin kamu senang setiap harinya, termasuk aku.",
+                    text: "Terima kasih udah hadir di hidup aku, selalu menghadapi sikap aku yang macem-macem, apalagi kalo udah tengah malem.",
                     color: 'white',
                     letterSpacing: 2,
                     fontSize: 18,
@@ -66,15 +58,23 @@ const Letter = () => {
                     color: 'white',
                     letterSpacing: 2,
                     fontSize: 18,
-                    duration: 2000,
+                    duration: 5000,
                     textAlign: 'center'
+                },
+                {
+                    text: "Kamu orang yang aku selalu tunggu kabarnya.",
+                    color: 'white',
+                    letterSpacing: 2,
+                    fontSize: 18,
+                    duration: 5000,
+                    textAlign: 'center',
                 },
                 {
                     text: "Aku selalu excited kalo denger cerita kamu, tentang apapun itu.",
                     color: 'white',
                     letterSpacing: 2,
                     fontSize: 18,
-                    duration: 2000,
+                    duration: 5000,
                     textAlign: 'center',
                 },
                 {

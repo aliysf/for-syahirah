@@ -4,47 +4,24 @@ import {createBrowserRouter, Outlet, RouterProvider, useLocation, useNavigate} f
 import Home from "./page/home";
 import Profile from "./page/profile";
 import Search from "./page/search";
-import OhBella from "./assets/ohbella.png";
 import Letter from "./page/letter";
+
+const arrMusic = ["https://open.spotify.com/embed/track/5EcGSkkNBMAWOePvLgKde1?utm_source=generator", "https://open.spotify.com/embed/track/0T3pyPYtHAsxIRymAZsTkX?utm_source=generator", "https://open.spotify.com/embed/track/4TvZH3MgJ1ZNBPquN2xwjK?utm_source=generator", "https://open.spotify.com/embed/track/6h2ffmOUdlTNBCGEQHy8Oq?utm_source=generator", "https://open.spotify.com/embed/track/4NpEJp3Iw0Wk0lsPYQZeEF?utm_source=generator", "https://open.spotify.com/embed/track/3HEfLSVUo9rxdD0JxbLAUU?utm_source=generator"]
 
 const Footer = () => {
     const navigate = useNavigate()
     const location = useLocation();
 
+    const randomMusic = arrMusic[Math.floor(Math.random() * arrMusic.length)];
+
     return (
         <footer className={'fixed bottom-0 w-full left-0'}>
             {!location.pathname.includes('letter') && !location.pathname.includes('library') &&
-                <>
-                    <div
-                        className={'bg-purple-500 h-[56px] w-[90%] m-auto rounded flex justify-between items-center px-[10px]'}>
-                        <div className={'flex gap-[8px]'}>
-                            <img src={OhBella} alt={'oh bella'} className={'w-[35px]'}/>
-
-                            <div className={'flex flex-col '}>
-                                <h2 className={'text-left text-[13px] font-bold'}>Oh, Bella</h2>
-                                <h2 className={'text-left text-[13px] font-medium'}>Reality Club</h2>
-                            </div>
-                        </div>
-                        <div className={'flex gap-[10px]'}>
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                 data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24"
-                                 className="Svg-sc-ytk21e-0 bneLcE" width="24" height="24">
-                                <path
-                                    d="M8.667 1.912a6.257 6.257 0 0 0-7.462 7.677c.24.906.683 1.747 1.295 2.457l7.955 9.482a2.015 2.015 0 0 0 3.09 0l7.956-9.482a6.188 6.188 0 0 0 1.382-5.234l-.49.097.49-.099a6.303 6.303 0 0 0-5.162-4.98h-.002a6.24 6.24 0 0 0-5.295 1.65.623.623 0 0 1-.848 0 6.257 6.257 0 0 0-2.91-1.568z"
-                                    fill="#fff"></path>
-                            </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" data-encore-id="icon"
-                                 role="img" aria-hidden="true" viewBox="0 0 24 24" className="Svg-sc-ytk21e-0 bneLcE"
-                                 width="24"
-                                 height="24">
-                                <path
-                                    d="M5.7 3a.7.7 0 0 0-.7.7v16.6a.7.7 0 0 0 .7.7h2.6a.7.7 0 0 0 .7-.7V3.7a.7.7 0 0 0-.7-.7H5.7zm10 0a.7.7 0 0 0-.7.7v16.6a.7.7 0 0 0 .7.7h2.6a.7.7 0 0 0 .7-.7V3.7a.7.7 0 0 0-.7-.7h-2.6z"
-                                    fill="#FFFFFF"></path>
-                            </svg>
-                        </div>
-                    </div>
-                    <div className={'w-1/3 h-[1px] bg-white ml-[calc(5%_+_5px)]'}/>
-                </>
+                <iframe style={{"borderRadius": "12px"}}
+                        src={randomMusic}
+                        width="100%" height="80" frameBorder="0"
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy"></iframe>
             }
             <div className={'flex justify-around items-center bg-[#242424] w-full h-[70px] '}>
                 <div className={'flex flex-col w-1/3 items-center justify-center gap-[4px]'}

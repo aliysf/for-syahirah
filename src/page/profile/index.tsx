@@ -7,6 +7,13 @@ import beduawisuda from "../../assets/bedua-wisuda.png";
 import bedualamaran from "../../assets/bedua-lamaran.png";
 import beduacosplay from "../../assets/bedua-cosplay.png";
 import beduamakan from "../../assets/bedua-makan.png";
+import beduafitting from "../../assets/beduafitting.png";
+import random1 from "../../assets/random1.png";
+import random2 from "../../assets/random2.png";
+import random3 from "../../assets/random3.png";
+import random4 from "../../assets/random4.png";
+import random5 from "../../assets/random5.png";
+import random6 from "../../assets/random6.png";
 import jalan1 from "../../assets/jalan1.png";
 import ucing from "../../assets/ucing.png";
 import {useState} from "react";
@@ -19,7 +26,7 @@ const Profile = () => {
             <h1 className={'text-[20px] font-bold'}>Syahirah / Husna / Runa / Ruby</h1>
             {show &&
                 <h1 className={'text-[20px] font-bold px-[10px] py-[2px] rounded-md animated-background bg-gradient-to-r from-purple-400 via-rose-300 to-violet-400'}>Princess
-                    / Ayang</h1>}
+                    / Sayang</h1>}
             <h1 className={'text-[14px] mb-[20px]'} onClick={() => setShow((pre) => !pre)}>👀 Click to show new names!
                 👀</h1>
 
@@ -62,6 +69,30 @@ const Profile = () => {
                         <h3 className={'text-left'}>✨</h3>
 
                     </div>
+                    <div className="min-w-[168px] w-[168px] h-[198px] flex flex-col gap-[8px] py-[8px]">
+                        <img className="rounded w-[152px] h-[152px] object-cover"
+                             src={random1} alt=""/>
+                        <h3 className={'text-left'}>📸</h3>
+
+                    </div>
+                    <div className="min-w-[168px] w-[168px] h-[198px] flex flex-col gap-[8px] py-[8px]">
+                        <img className="rounded w-[152px] h-[152px] object-cover"
+                             src={random4} alt=""/>
+                        <h3 className={'text-left'}>✨</h3>
+
+                    </div>
+                    <div className="min-w-[168px] w-[168px] h-[198px] flex flex-col gap-[8px] py-[8px]">
+                        <img className="rounded w-[152px] h-[152px] object-cover"
+                             src={random5} alt=""/>
+                        <h3 className={'text-left'}>📷</h3>
+
+                    </div>
+                    <div className="min-w-[168px] w-[168px] h-[198px] flex flex-col gap-[8px] py-[8px]">
+                        <img className="rounded w-[152px] h-[152px] object-cover"
+                             src={random6} alt=""/>
+                        <h3 className={'text-left'}>✨</h3>
+
+                    </div>
                 </div>
             </div>
 
@@ -80,9 +111,24 @@ const Profile = () => {
                         <img className="rounded w-[152px] h-[152px] object-cover"
                              src={beduawisuda} alt=""/>
                     </div>
+
+                    <div className="min-w-[168px] w-[168px] h-[198px] flex flex-col gap-[8px] py-[8px]">
+                        <img className="rounded w-[152px] h-[152px] object-cover"
+                             src={random2} alt=""/>
+
+                    </div>
+                    <div className="min-w-[168px] w-[168px] h-[198px] flex flex-col gap-[8px] py-[8px]">
+                        <img className="rounded w-[152px] h-[152px] object-cover"
+                             src={random3} alt=""/>
+
+                    </div>
                     <div className="min-w-[168px] w-[168px] h-[198px] flex flex-col gap-[8px] py-[8px]">
                         <img className="rounded w-[152px] h-[152px] object-cover"
                              src={beduacosplay} alt=""/>
+                    </div>
+                    <div className="min-w-[168px] w-[168px] h-[198px] flex flex-col gap-[8px] py-[8px]">
+                        <img className="rounded w-[152px] h-[152px] object-cover"
+                             src={beduafitting} alt=""/>
                     </div>
                 </div>
             </div>
