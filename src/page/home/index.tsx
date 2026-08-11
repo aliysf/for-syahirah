@@ -8,6 +8,7 @@ import Syg from "../../assets/syg.png";
 import Bangkok from "../../assets/bangkok.png";
 import Marry from "../../assets/marry.jpeg";
 import Mina from "../../assets/mina.png";
+import Dinner from "../../assets/bedua-makan.png";
 import {useNavigate} from "react-router-dom";
 import {formatDistanceToNow} from "date-fns";
 
@@ -115,6 +116,16 @@ const Home = () => {
                             <div>
                                 <h3 className={'text-left'}>✈️</h3>
                                 <h4 className={'text-left'}>{formatDistanceToNow(new Date('2024-11-25'))}</h4>
+                            </div>
+                        </div>
+
+                        <div className="min-w-[168px] w-[168px] h-[240px] flex flex-col gap-[8px] py-[8px]">
+                            <img className="rounded w-[152px] h-[152px] object-cover"
+                                 style={{filter: "grayscale(100%)"}}
+                                 src={Dinner} alt=""/>
+                            <div>
+                                <h3 className={'text-left'}>🍽️</h3>
+                                <h4 className={'text-left'}>{formatDistanceToNow(new Date('2026-11-01'))}</h4>
                             </div>
                         </div>
                     </div>
