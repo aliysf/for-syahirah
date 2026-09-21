@@ -9,6 +9,9 @@ import Bangkok from "../../assets/bangkok.png";
 import Marry from "../../assets/marry.jpeg";
 import Mina from "../../assets/mina.png";
 import Dinner from "../../assets/bedua-makan.png";
+import Bunga from "../../assets/bunga.png";
+import Ohbella from "../../assets/ohbella.png";
+import Bareng from "../../assets/bareng1.png";
 import {useNavigate} from "react-router-dom";
 import {formatDistanceToNow} from "date-fns";
 
@@ -26,8 +29,36 @@ const Header = () => {
     )
 }
 
+const memories = [
+    {src: First, title: 'First'},
+    {src: Engagement, title: 'Lamaran uhuy'},
+    {src: Princess, title: 'Cosplay Princess'},
+    {src: Yudisium, title: 'Mam Bareng'},
+    {src: Wisuda, title: 'Cie Sarjana'},
+    {src: Mina, title: 'Main bareng :)'},
+]
+
+const datedEvents = [
+    {src: Marry, title: 'Wedding 💍', date: '2024-11-01'},
+    {src: Bangkok, title: 'Bangkok ✈️', date: '2024-11-25'},
+    {src: Ohbella, title: '23rd Birthday 🥳', date: '2026-10-23'},
+    {src: Dinner, title: 'Dinner 🍽️', date: '2026-11-01'},
+    {src: Bunga, title: 'Pregnancy 🤰', date: '2027-04-23'},
+    {src: Bareng, title: '1st Birthday 👶', date: '2028-04-23'},
+].sort((a, b) => +new Date(a.date) - +new Date(b.date))
+
+const startOfToday = () => {
+    const today = new Date()
+    today.setHours(0, 0, 0, 0)
+    return today
+}
+
 const Home = () => {
     const navigate = useNavigate();
+    const today = startOfToday()
+    const pastEvents = datedEvents.filter((event) => new Date(event.date) <= today)
+    const upcomingEvents = datedEvents.filter((event) => new Date(event.date) > today)
+
     return (
         <>
             <Header/>
@@ -35,7 +66,7 @@ const Home = () => {
                 <div
                     className={'rounded w-screen animated-background ml-[-16px] bg-gradient-to-r from-purple-400 via-rose-300 to-violet-400 h-[200px] text-left flex flex-col justify-center px-[16px] gap-[4px]'}>
                     <h3 className={'text-left font-bold text-[28px] text-neutral-800'}>Happy<span
-                        className={'text-yellow-300'}> 22th</span> Birthday 🥳</h3>
+                        className={'text-yellow-300'}> 23rd</span> Birthday 🥳</h3>
                     <span className={'text-left font-bold text-[20px]'}>
                     Hope you {' '}
                         <TypeIt getBeforeInit={(instance) => instance.options({
@@ -54,43 +85,22 @@ const Home = () => {
                 <div className={'flex flex-col gap-[8px]'}>
                     <h2 className={'text-left font-bold text-[20px]'}>Jump Back In</h2>
                     <div className={'flex overflow-x-scroll flex-nowrap no-scrollbar snap-x'}>
-
-                        <div className="min-w-[168px] w-[168px] h-[198px] flex flex-col gap-[8px] py-[8px]">
-                            <img className="rounded w-[152px] h-[152px] object-cover"
-                                 src={First} alt=""/>
-                            <h3 className={'text-left'}>First</h3>
-                        </div>
-                        <div className="min-w-[168px] w-[168px] h-[198px] flex flex-col gap-[8px] py-[8px]">
-                            <img className="rounded w-[152px] h-[152px] object-cover"
-                                 src={Engagement} alt=""/>
-                            <h3 className={'text-left'}>Lamaran uhuy</h3>
-                        </div>
-                        <div className="min-w-[168px] w-[168px] h-[198px] flex flex-col gap-[8px] py-[8px]">
-                            <img className="rounded w-[152px] h-[152px] object-cover"
-                                 src={Princess} alt=""/>
-                            <h3 className={'text-left'}>Cosplay Princess</h3>
-                        </div>
-
-
-                        <div className="min-w-[168px] w-[168px] h-[198px] flex flex-col gap-[8px] py-[8px]">
-                            <img className="rounded w-[152px] h-[152px] object-cover"
-                                 src={Yudisium} alt=""/>
-                            <h3 className={'text-left'}>Mam Bareng</h3>
-                        </div>
-
-                        <div className="min-w-[168px] w-[168px] h-[198px] flex flex-col gap-[8px] py-[8px]">
-                            <img className="rounded w-[152px] h-[152px] object-cover"
-                                 src={Wisuda} alt=""/>
-                            <h3 className={'text-left'}>Cie Sarjana</h3>
-                        </div>
-
-                        <div className="min-w-[168px] w-[168px] h-[198px] flex flex-col gap-[8px] py-[8px]">
-                            <img className="rounded w-[152px] h-[152px] object-cover"
-                                 src={Mina} alt=""/>
-                            <h3 className={'text-left'}>Main bareng :)</h3>
-                        </div>
-
-
+                        {memories.map((memory) => (
+                            <div key={memory.title}
+                                 className="min-w-[168px] w-[168px] h-[198px] flex flex-col gap-[8px] py-[8px]">
+                                <img className="rounded w-[152px] h-[152px] object-cover"
+                                     src={memory.src} alt=""/>
+                                <h3 className={'text-left'}>{memory.title}</h3>
+                            </div>
+                        ))}
+                        {pastEvents.map((event) => (
+                            <div key={event.title}
+                                 className="min-w-[168px] w-[168px] h-[198px] flex flex-col gap-[8px] py-[8px]">
+                                <img className="rounded w-[152px] h-[152px] object-cover"
+                                     src={event.src} alt=""/>
+                                <h3 className={'text-left'}>{event.title}</h3>
+                            </div>
+                        ))}
                     </div>
                 </div>
 
@@ -98,36 +108,18 @@ const Home = () => {
                 <div className={'flex flex-col gap-[4px] mb-[150px]'}>
                     <h2 className={'text-left font-bold text-[20px]'}>Coming Soon &#128522;</h2>
                     <div className={'flex overflow-x-scroll flex-nowrap no-scrollbar snap-x'}>
-                        <div className="min-w-[168px] w-[168px] h-[240px] flex flex-col gap-[8px] py-[8px]">
-                            <img className="rounded w-[152px] h-[152px] object-cover"
-                                 style={{filter: "grayscale(100%)"}}
-                                 src={Marry} alt=""/>
-                            <div>
-                                <h3 className={'text-left'}>💍</h3>
-                                <h4 className={'text-left'}>{formatDistanceToNow(new Date('2024-11-01'))}</h4>
+                        {upcomingEvents.map((event) => (
+                            <div key={event.title}
+                                 className="min-w-[168px] w-[168px] h-[240px] flex flex-col gap-[8px] py-[8px]">
+                                <img className="rounded w-[152px] h-[152px] object-cover"
+                                     style={{filter: "grayscale(100%)"}}
+                                     src={event.src} alt=""/>
+                                <div>
+                                    <h3 className={'text-left'}>{event.title}</h3>
+                                    <h4 className={'text-left'}>{formatDistanceToNow(new Date(event.date))}</h4>
+                                </div>
                             </div>
-                        </div>
-
-
-                        <div className="min-w-[168px] w-[168px] h-[240px] flex flex-col gap-[8px] py-[8px]">
-                            <img className="rounded w-[152px] h-[152px] object-cover"
-                                 style={{filter: "grayscale(100%)"}}
-                                 src={Bangkok} alt=""/>
-                            <div>
-                                <h3 className={'text-left'}>✈️</h3>
-                                <h4 className={'text-left'}>{formatDistanceToNow(new Date('2024-11-25'))}</h4>
-                            </div>
-                        </div>
-
-                        <div className="min-w-[168px] w-[168px] h-[240px] flex flex-col gap-[8px] py-[8px]">
-                            <img className="rounded w-[152px] h-[152px] object-cover"
-                                 style={{filter: "grayscale(100%)"}}
-                                 src={Dinner} alt=""/>
-                            <div>
-                                <h3 className={'text-left'}>🍽️</h3>
-                                <h4 className={'text-left'}>{formatDistanceToNow(new Date('2026-11-01'))}</h4>
-                            </div>
-                        </div>
+                        ))}
                     </div>
                 </div>
 
