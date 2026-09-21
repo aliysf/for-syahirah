@@ -25,8 +25,8 @@ const Profile = () => {
             <img src={Syg} className={'rounded-full w-[150px] h-[150px] object-cover mt-[20px]'}/>
             <h1 className={'text-[20px] font-bold'}>Syahirah / Husna / Runa / Ruby</h1>
             {show &&
-                <h1 className={'text-[20px] font-bold px-[10px] py-[2px] rounded-md animated-background bg-gradient-to-r from-purple-400 via-rose-300 to-violet-400'}>Princess
-                    / Sayang</h1>}
+                <h1 className={'text-[20px] font-bold px-[10px] py-[2px] rounded-md animated-background bg-gradient-to-r from-purple-400 via-rose-300 to-violet-400'}>Sayang
+                    / Mamah</h1>}
             <h1 className={'text-[14px] mb-[20px]'} onClick={() => setShow((pre) => !pre)}>👀 Click to show new names!
                 👀</h1>
 
