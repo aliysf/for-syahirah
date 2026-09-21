@@ -9,9 +9,9 @@ import Bangkok from "../../assets/bangkok.png";
 import Marry from "../../assets/marry.jpeg";
 import Mina from "../../assets/mina.png";
 import Dinner from "../../assets/bedua-makan.png";
-import Ohbella from "../../assets/ohbella.png";
 import Pregnancy from "../../assets/pregnancy.jpg";
 import HasanBirthday from "../../assets/hasan-birthday.jpg";
+import Birthday23 from "../../assets/birthday-23.png";
 import {useNavigate} from "react-router-dom";
 import {formatDistanceToNow} from "date-fns";
 
@@ -42,8 +42,8 @@ const datedEvents = [
     {src: Marry, title: 'Wedding 💍', date: '2024-11-01'},
     {src: Bangkok, title: 'Bangkok ✈️', date: '2024-11-25'},
     {src: Pregnancy, title: 'Pregnancy 🤰', date: '2025-03-01'},
+    {src: Birthday23, title: '23rd Birthday 🥳', date: '2025-09-21'},
     {src: HasanBirthday, title: "Hasan's 1st Birthday 🎂", date: '2026-09-01'},
-    {src: Ohbella, title: '23rd Birthday 🥳', date: '2026-10-23'},
     {src: Dinner, title: 'Dinner 🍽️', date: '2026-11-01'},
 ].sort((a, b) => +new Date(a.date) - +new Date(b.date))
 
@@ -66,7 +66,7 @@ const Home = () => {
                 <div
                     className={'rounded w-screen animated-background ml-[-16px] bg-gradient-to-r from-purple-400 via-rose-300 to-violet-400 h-[200px] text-left flex flex-col justify-center px-[16px] gap-[4px]'}>
                     <h3 className={'text-left font-bold text-[28px] text-neutral-800'}>Happy<span
-                        className={'text-yellow-300'}> 23rd</span> Birthday 🥳</h3>
+                        className={'text-yellow-300'}> 24th</span> Birthday 🥳</h3>
                     <span className={'text-left font-bold text-[20px]'}>
                     Hope you {' '}
                         <TypeIt getBeforeInit={(instance) => instance.options({
