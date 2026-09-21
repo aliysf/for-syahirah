@@ -64,16 +64,16 @@ const Home = () => {
             <Header/>
             <div className={'flex flex-col gap-[20px]'}>
                 <div
-                    className={'rounded w-screen animated-background ml-[-16px] bg-gradient-to-r from-purple-400 via-rose-300 to-violet-400 h-[200px] text-left flex flex-col justify-center px-[16px] gap-[4px]'}>
+                    className={'rounded w-screen animated-background ml-[-16px] bg-gradient-to-r from-purple-400 via-rose-300 to-violet-400 h-[220px] text-left flex flex-col justify-center px-[16px] gap-[4px]'}>
                     <h3 className={'text-left font-bold text-[28px] text-neutral-800'}>Happy<span
                         className={'text-yellow-300'}> 24th</span> Birthday 🥳</h3>
-                    <span className={'text-left font-bold text-[20px]'}>
-                    Hope you {' '}
+                    <span className={'text-left font-bold text-[18px] leading-tight'}>
+                    You are {' '}
                         <TypeIt getBeforeInit={(instance) => instance.options({
                             loop: true,
-                            speed: 100
-                        }).type('doing well.').pause(500).delete().type('stay healthy.').pause(500).delete().type('achieve your goals.').pause(500).delete().type('always be happy.').pause(500).delete().type('feel grateful.')}
-                                className={'text-left font-bold text-[20px]'}></TypeIt>
+                            speed: 80
+                        }).type('the prettiest woman I have ever seen.').pause(800).delete().type('the greatest mom for our kid.').pause(800).delete().type('my favorite person, always.').pause(800).delete().type('loved more than words can say.')}
+                                className={'text-left font-bold text-[18px]'}></TypeIt>
                 </span>
                     <button onClick={() => navigate('/letter')}
                             className={'w-fit mt-[4px] outline-none focus:outline-none'}>Open The
