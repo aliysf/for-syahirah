@@ -9,9 +9,9 @@ import Bangkok from "../../assets/bangkok.png";
 import Marry from "../../assets/marry.jpeg";
 import Mina from "../../assets/mina.png";
 import Dinner from "../../assets/bedua-makan.png";
-import Bunga from "../../assets/bunga.png";
 import Ohbella from "../../assets/ohbella.png";
-import Bareng from "../../assets/bareng1.png";
+import Pregnancy from "../../assets/pregnancy.jpg";
+import HasanBirthday from "../../assets/hasan-birthday.jpg";
 import {useNavigate} from "react-router-dom";
 import {formatDistanceToNow} from "date-fns";
 
@@ -41,10 +41,10 @@ const memories = [
 const datedEvents = [
     {src: Marry, title: 'Wedding 💍', date: '2024-11-01'},
     {src: Bangkok, title: 'Bangkok ✈️', date: '2024-11-25'},
+    {src: Pregnancy, title: 'Pregnancy 🤰', date: '2025-03-01'},
+    {src: HasanBirthday, title: "Hasan's 1st Birthday 🎂", date: '2026-09-01'},
     {src: Ohbella, title: '23rd Birthday 🥳', date: '2026-10-23'},
     {src: Dinner, title: 'Dinner 🍽️', date: '2026-11-01'},
-    {src: Bunga, title: 'Pregnancy 🤰', date: '2027-04-23'},
-    {src: Bareng, title: '1st Birthday 👶', date: '2028-04-23'},
 ].sort((a, b) => +new Date(a.date) - +new Date(b.date))
 
 const startOfToday = () => {
