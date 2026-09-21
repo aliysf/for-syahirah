@@ -22,7 +22,7 @@ const Letter = () => {
                     textAlign: 'center',
                 },
                 {
-                    text: "Disini tulisan aku lebih bagus hehe.",
+                    text: "To the prettiest woman I have ever seen.",
                     fontSize: 18,
                     duration: 3000,
                     letterSpacing: 2,
@@ -30,7 +30,15 @@ const Letter = () => {
                     textAlign: 'center'
                 },
                 {
-                    text: "Aku sangat bersyukur kenal dengan kamu, sangat senang ketika ngobrol sama kamu, dan sangat bahagia karena dikit lagi aku jadi suami kamu.",
+                    text: "And the greatest mom for our little kid.",
+                    color: 'white',
+                    letterSpacing: 2,
+                    fontSize: 18,
+                    duration: 4000,
+                    textAlign: 'center'
+                },
+                {
+                    text: "Every day I still catch myself looking at you, grateful that you chose us.",
                     color: 'white',
                     letterSpacing: 2,
                     fontSize: 18,
@@ -38,7 +46,7 @@ const Letter = () => {
                     textAlign: 'center'
                 },
                 {
-                    text: "Terima kasih udah hadir di hidup aku, selalu menghadapi sikap aku yang macem-macem, apalagi kalo udah tengah malem.",
+                    text: "Thank you for the warmth you pour into our home, and the gentle love you give our child.",
                     color: 'white',
                     letterSpacing: 2,
                     fontSize: 18,
@@ -46,7 +54,7 @@ const Letter = () => {
                     textAlign: 'center'
                 },
                 {
-                    text: "Aku mendoakan kamu agar sehat selalu, mendapatkan hal-hal yang terbaik, dan dikelilingi oleh orang-orang baik.",
+                    text: "Watching you be a mother is the most beautiful thing I have ever witnessed.",
                     color: 'white',
                     letterSpacing: 2,
                     fontSize: 18,
@@ -54,15 +62,7 @@ const Letter = () => {
                     textAlign: 'center'
                 },
                 {
-                    text: "Dan...",
-                    color: 'white',
-                    letterSpacing: 2,
-                    fontSize: 18,
-                    duration: 5000,
-                    textAlign: 'center'
-                },
-                {
-                    text: "Kamu orang yang aku selalu tunggu kabarnya.",
+                    text: "You are my forever, my peace, my favorite person.",
                     color: 'white',
                     letterSpacing: 2,
                     fontSize: 18,
@@ -70,7 +70,7 @@ const Letter = () => {
                     textAlign: 'center',
                 },
                 {
-                    text: "Aku selalu excited kalo denger cerita kamu, tentang apapun itu.",
+                    text: "I love you more than yesterday, and somehow still less than tomorrow.",
                     color: 'white',
                     letterSpacing: 2,
                     fontSize: 18,
